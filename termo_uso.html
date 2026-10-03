@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="apple-touch-icon.png">
+    <title>Termos de Serviço — Meu Dízimo Digital</title>
+    <meta name="description" content="Termos de Serviço do Meu Dízimo Digital — Assistente digital da Pastoral do Dízimo da Paróquia Nossa Senhora Aparecida.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #d4a843;
+            --gold-light: #f0d078;
+            --gold-dark: #a07c2e;
+            --cream: #faf6ed;
+            --cream-dark: #f0e8d6;
+            --brown: #3d2e1e;
+            --brown-light: #5c4a36;
+            --brown-dim: #8a7560;
+            --green-whatsapp: #25d366;
+            --white: #ffffff;
+            --shadow: rgba(61, 46, 30, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--cream);
+            color: var(--brown);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        .pattern-bg {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            opacity: 0.03;
+            background-image: radial-gradient(circle at 1px 1px, var(--brown) 1px, transparent 0);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header */
+        header {
+            padding: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+        }
+
+        .brand-icon {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            box-shadow: 0 4px 16px rgba(212, 168, 67, 0.3);
+        }
+
+        .brand-text h1 {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--brown);
+            line-height: 1.1;
+        }
+
+        .brand-text span {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: var(--brown-dim);
+            letter-spacing: 0.5px;
+        }
+
+        .header-badge {
+            background: var(--white);
+            border: 1px solid var(--cream-dark);
+            border-radius: 100px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.8rem;
+            color: var(--brown-dim);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .header-badge:hover {
+            border-color: var(--gold);
+        }
+
+        /* Page hero */
+        .page-hero {
+            padding: 3rem 0 2rem;
+            text-align: center;
+        }
+
+        .page-hero .hero-label {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--brown);
+            font-weight: 600;
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 0.5rem 1.5rem;
+            border-radius: 100px;
+            margin-bottom: 1.5rem;
+        }
+
+        .page-hero h2 {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 800;
+            line-height: 1.15;
+            color: var(--brown);
+        }
+
+        /* Content */
+        .content-card {
+            background: var(--white);
+            border: 1px solid var(--cream-dark);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 1rem 0 2rem;
+            box-shadow: 0 4px 24px var(--shadow);
+        }
+
+        .content-card h2 {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--brown);
+            margin: 2.2rem 0 1rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 2px solid var(--cream-dark);
+        }
+
+        .content-card h2:first-of-type {
+            margin-top: 1.5rem;
+        }
+
+        .content-card h3 {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--gold-dark);
+            margin: 1.4rem 0 0.6rem;
+        }
+
+        .content-card p {
+            margin-bottom: 1rem;
+            color: var(--brown-light);
+            font-size: 0.95rem;
+        }
+
+        .content-card ul {
+            margin: 0.8rem 0 1.2rem 1.6rem;
+        }
+
+        .content-card li {
+            margin-bottom: 0.5rem;
+            color: var(--brown-light);
+            font-size: 0.95rem;
+        }
+
+        .content-card a {
+            color: var(--gold-dark);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .content-card a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight {
+            background: var(--cream);
+            border-left: 4px solid var(--gold);
+            border-radius: 0 12px 12px 0;
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+            color: var(--brown-light);
+        }
+
+        .warning {
+            background: #fdf3e0;
+            border-left: 4px solid var(--gold-dark);
+            border-radius: 0 12px 12px 0;
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+            color: var(--brown-light);
+        }
+
+        .date {
+            text-align: center;
+            color: var(--brown-dim);
+            font-size: 0.85rem;
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--cream-dark);
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 1px solid var(--cream-dark);
+            margin-top: 2rem;
+        }
+
+        footer p {
+            color: var(--brown-dim);
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: var(--gold-dark);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-brand {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-weight: 800;
+            font-size: 1rem;
+            color: var(--brown);
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .page-hero h2 { font-size: 1.8rem; }
+            .content-card { padding: 2rem 1.5rem; }
+            .header-badge { display: none; }
+            .brand-text h1 { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="pattern-bg"></div>
+
+    <div class="container">
+        <header>
+            <a class="brand" href="index.html">
+                <div class="brand-icon">⛪</div>
+                <div class="brand-text">
+                    <h1>Meu Dízimo Digital</h1>
+                    <span>Pastoral do Dízimo Digital</span>
+                </div>
+            </a>
+            <a class="header-badge" href="index.html">← Voltar ao início</a>
+        </header>
+
+        <section class="page-hero">
+            <div class="hero-label">✦ Condições de Uso ✦</div>
+            <h2>Termos de Serviço</h2>
+        </section>
+
+        <div class="content-card">
+            <div class="highlight">
+                <strong>Bem-vindo ao Meu Dízimo Digital!</strong> Estes Termos de Serviço estabelecem as condições de uso do nosso assistente digital. Ao utilizar o serviço, você concorda com todos os termos aqui descritos.
+            </div>
+
+            <h2>1. Definições</h2>
+
+            <p>Para fins destes Termos, considera-se:</p>
+            <ul>
+                <li><strong>"Serviço" ou "Meu Dízimo Digital":</strong> Assistente digital via WhatsApp para gestão de dízimo</li>
+                <li><strong>"Usuário" ou "Dizimista":</strong> Pessoa que utiliza o serviço</li>
+                <li><strong>"Comunidade":</strong> Organização religiosa responsável pelo serviço</li>
+                <li><strong>"Devolução":</strong> Contribuição voluntária do dízimo</li>
+                <li><strong>"Plataforma":</strong> Sistema composto por WhatsApp, backend e sistema administrativo</li>
+            </ul>
+
+            <h2>2. Aceitação dos Termos</h2>
+
+            <h3>2.1 Concordância</h3>
+            <p>Ao se cadastrar como dizimista através do assistente Meu Dízimo Digital, você declara que:</p>
+            <ul>
+                <li>Leu, compreendeu e concorda com estes Termos de Serviço</li>
+                <li>Leu e concorda com nossa Política de Privacidade</li>
+                <li>Tem capacidade legal para firmar este acordo (maior de 18 anos)</li>
+                <li>Fornecerá informações verdadeiras e atualizadas</li>
+            </ul>
+
+            <h3>2.2 Modificações</h3>
+            <p>Reservamo-nos o direito de modificar estes termos a qualquer momento. Em caso de alterações substanciais:</p>
+            <ul>
+                <li>Você será notificado via WhatsApp</li>
+                <li>Terá 15 dias para aceitar ou rejeitar os novos termos</li>
+                <li>O uso continuado após este prazo implica aceitação</li>
+            </ul>
+
+            <h2>3. Descrição do Serviço</h2>
+
+            <h3>3.1 Funcionalidades</h3>
+            <p>O Meu Dízimo Digital oferece:</p>
+            <ul>
+                <li><strong>Cadastro de Dizimistas:</strong> Registro e atualização de dados pessoais</li>
+                <li><strong>Orientação sobre Devolução:</strong> Informações sobre como devolver o dízimo</li>
+                <li><strong>Geração de QR Code PIX:</strong> Código para pagamento via PIX</li>
+                <li><strong>Registro de Comprovantes:</strong> Envio e armazenamento de comprovantes</li>
+                <li><strong>Atendimento Pastoral:</strong> Encaminhamento para secretaria quando necessário</li>
+            </ul>
+
+            <h3>3.2 Disponibilidade</h3>
+            <p>O serviço está disponível:</p>
+            <ul>
+                <li><strong>24 horas por dia:</strong> Para cadastro e orientações básicas</li>
+                <li><strong>Atendimento humano:</strong> Conforme horários da secretaria</li>
+                <li><strong>Manutenções programadas:</strong> Podem ocorrer com aviso prévio</li>
+            </ul>
+
+            <div class="warning">
+                <strong>⚠️ Importante:</strong> O serviço depende da disponibilidade do WhatsApp e da conexão de internet. Não nos responsabilizamos por falhas nestes serviços de terceiros.
+            </div>
+
+            <h2>4. Cadastro e Conta</h2>
+
+            <h3>4.1 Requisitos de Cadastro</h3>
+            <p>Para se cadastrar como dizimista, você deve:</p>
+            <ul>
+                <li>Ter um número de WhatsApp ativo</li>
+                <li>Ser maior de 18 anos</li>
+                <li>Fornecer dados pessoais verdadeiros e completos</li>
+                <li>Manter seus dados atualizados</li>
+            </ul>
+
+            <h3>4.2 Responsabilidade pelos Dados</h3>
+            <p>Você é responsável por:</p>
+            <ul>
+                <li>Manter a segurança do seu número de WhatsApp</li>
+                <li>Notificar imediatamente sobre uso não autorizado</li>
+                <li>Atualizar dados cadastrais quando houver mudanças</li>
+                <li>Todas as atividades realizadas através da sua conta</li>
+            </ul>
+
+            <h3>4.3 Unicidade do Cadastro</h3>
+            <p>Cada número de WhatsApp pode ter apenas um cadastro ativo. Caso identifiquemos duplicidade:</p>
+            <ul>
+                <li>Entraremos em contato para regularização</li>
+                <li>Podemos suspender temporariamente o acesso</li>
+                <li>Manteremos apenas o cadastro mais recente após confirmação</li>
+            </ul>
+
+            <h2>5. Devolução do Dízimo</h2>
+
+            <h3>5.1 Natureza da Contribuição</h3>
+            <p>É importante esclarecer que:</p>
+            <ul>
+                <li>O dízimo é uma contribuição <strong>voluntária</strong> e <strong>religiosa</strong></li>
+                <li>Não constitui pagamento por serviços prestados</li>
+                <li>É uma prática de fé e não uma obrigação legal</li>
+                <li>O valor é determinado livremente pelo dizimista</li>
+            </ul>
+
+            <h3>5.2 Processo de Devolução</h3>
+            <p>Ao devolver o dízimo através do Meu Dízimo Digital:</p>
+            <ul>
+                <li>Você receberá um QR Code PIX padrão da comunidade</li>
+                <li>O pagamento é processado diretamente pela instituição bancária</li>
+                <li><strong>O Meu Dízimo Digital NÃO processa pagamentos</strong></li>
+                <li>Após o pagamento, você pode enviar o comprovante voluntariamente</li>
+            </ul>
+
+            <h3>5.3 Comprovantes</h3>
+            <ul>
+                <li>O envio de comprovante é <strong>opcional mas recomendado</strong></li>
+                <li>Comprovantes são verificados manualmente pela secretaria</li>
+                <li>Não validamos automaticamente comprovantes</li>
+                <li>Comprovantes podem ser solicitados para fins de controle interno</li>
+            </ul>
+
+            <h3>5.4 Não Processamento Automático</h3>
+            <div class="warning">
+                <strong>⚠️ Atenção:</strong> O Meu Dízimo Digital é apenas um assistente de orientação. NÃO processamos pagamentos automaticamente, NÃO temos acesso a dados bancários e NÃO validamos transações automaticamente.
+            </div>
+
+            <h2>6. Uso Aceitável</h2>
+
+            <h3>6.1 Proibições</h3>
+            <p>Ao usar o Meu Dízimo Digital, você concorda em NÃO:</p>
+            <ul>
+                <li>Fornecer informações falsas ou enganosas</li>
+                <li>Usar o serviço para fins ilegais ou não autorizados</li>
+                <li>Tentar acessar sistemas ou dados não autorizados</li>
+                <li>Enviar spam, vírus ou código malicioso</li>
+                <li>Sobrecarregar ou interferir no funcionamento do serviço</li>
+                <li>Copiar, modificar ou distribuir o conteúdo sem autorização</li>
+                <li>Usar bots ou automação não autorizada</li>
+                <li>Representar falsamente vínculo com a comunidade</li>
+            </ul>
+
+            <h3>6.2 Consequências de Violação</h3>
+            <p>Em caso de violação destes termos, podemos:</p>
+            <ul>
+                <li>Suspender temporariamente seu acesso</li>
+                <li>Encerrar permanentemente sua conta</li>
+                <li>Tomar medidas legais apropriadas</li>
+                <li>Reportar atividades ilegais às autoridades competentes</li>
+            </ul>
+
+            <h2>7. Propriedade Intelectual</h2>
+
+            <h3>7.1 Direitos</h3>
+            <p>Todos os direitos sobre o Meu Dízimo Digital pertencem aos seus titulares, incluindo:</p>
+            <ul>
+                <li>Código-fonte do sistema</li>
+                <li>Design e interface</li>
+                <li>Marca "Meu Dízimo Digital"</li>
+                <li>Conteúdo e textos</li>
+                <li>Metodologia e processos</li>
+            </ul>
+
+            <h3>7.2 Licença de Uso</h3>
+            <p>Concedemos a você uma licença limitada, não exclusiva, intransferível e revogável para:</p>
+            <ul>
+                <li>Usar o serviço para fins pessoais</li>
+                <li>Acessar conteúdo disponibilizado</li>
+            </ul>
+            <p>Esta licença não permite:</p>
+            <ul>
+                <li>Revenda ou uso comercial</li>
+                <li>Modificação ou criação de obras derivadas</li>
+                <li>Download (exceto comprovantes próprios)</li>
+                <li>Engenharia reversa</li>
+            </ul>
+
+            <h2>8. Privacidade e Proteção de Dados</h2>
+
+            <p>O tratamento dos seus dados pessoais é regido por nossa <a href="politica_privacidade.html">Política de Privacidade</a>, que faz parte integrante destes Termos.</p>
+
+            <p>Destacamos que:</p>
+            <ul>
+                <li>Seus dados são usados apenas para fins pastorais e administrativos</li>
+                <li>Não vendemos ou alugamos seus dados</li>
+                <li>Você tem direitos garantidos pela LGPD</li>
+                <li>Implementamos medidas de segurança adequadas</li>
+            </ul>
+
+            <h2>9. Limitação de Responsabilidade</h2>
+
+            <h3>9.1 Fornecimento "Como Está"</h3>
+            <p>O serviço é fornecido "como está" e "conforme disponível", sem garantias de qualquer tipo, expressas ou implícitas.</p>
+
+            <h3>9.2 Não Garantimos</h3>
+            <ul>
+                <li>Funcionamento ininterrupto ou livre de erros</li>
+                <li>Correção de todos os defeitos</li>
+                <li>Ausência de vírus ou componentes prejudiciais</li>
+                <li>Precisão ou confiabilidade absoluta</li>
+                <li>Resultados específicos do uso do serviço</li>
+            </ul>
+
+            <h3>9.3 Exclusão de Responsabilidade</h3>
+            <p>Não nos responsabilizamos por:</p>
+            <ul>
+                <li><strong>Falhas Técnicas:</strong> Problemas no WhatsApp, internet ou sistemas de terceiros</li>
+                <li><strong>Perda de Dados:</strong> Embora façamos backups, não garantimos recuperação total</li>
+                <li><strong>Transações Bancárias:</strong> Problemas com PIX ou instituições financeiras</li>
+                <li><strong>Uso Indevido:</strong> Danos causados por terceiros ou uso não autorizado</li>
+                <li><strong>Decisões Pessoais:</strong> Consequências de decisões tomadas com base no serviço</li>
+            </ul>
+
+            <h3>9.4 Limitação de Danos</h3>
+            <p>Em nenhuma hipótese seremos responsáveis por danos indiretos, incidentais, especiais, consequenciais ou punitivos, incluindo lucros cessantes, mesmo que tenhamos sido avisados da possibilidade de tais danos.</p>
+
+            <h2>10. Indenização</h2>
+
+            <p>Você concorda em indenizar, defender e isentar a comunidade, seus diretores, funcionários e agentes de e contra quaisquer reclamações, responsabilidades, danos, perdas e despesas (incluindo honorários advocatícios) decorrentes de:</p>
+            <ul>
+                <li>Seu uso do serviço</li>
+                <li>Violação destes Termos</li>
+                <li>Violação de direitos de terceiros</li>
+                <li>Informações falsas fornecidas</li>
+            </ul>
+
+            <h2>11. Rescisão</h2>
+
+            <h3>11.1 Por Sua Parte</h3>
+            <p>Você pode encerrar seu cadastro a qualquer momento:</p>
+            <ul>
+                <li>Enviando "Cancelar cadastro" no assistente</li>
+                <li>Entrando em contato com a secretaria</li>
+                <li>Deixando de usar o serviço por 12 meses</li>
+            </ul>
+
+            <h3>11.2 Por Nossa Parte</h3>
+            <p>Podemos suspender ou encerrar seu acesso:</p>
+            <ul>
+                <li>Por violação destes Termos</li>
+                <li>Por inatividade prolongada</li>
+                <li>Por solicitação sua</li>
+                <li>Por descontinuação do serviço</li>
+                <li>Por determinação legal</li>
+            </ul>
+
+            <h3>11.3 Efeitos da Rescisão</h3>
+            <p>Após o encerramento:</p>
+            <ul>
+                <li>Seu acesso ao serviço cessará imediatamente</li>
+                <li>Histórico de devoluções será mantido conforme Política de Privacidade</li>
+                <li>Dados pessoais serão tratados conforme LGPD</li>
+                <li>Obrigações de confidencialidade permanecerão vigentes</li>
+            </ul>
+
+            <h2>12. Disposições Gerais</h2>
+
+            <h3>12.1 Acordo Integral</h3>
+            <p>Estes Termos, juntamente com a Política de Privacidade, constituem o acordo integral entre você e a comunidade.</p>
+
+            <h3>12.2 Independência das Cláusulas</h3>
+            <p>Se qualquer disposição destes Termos for considerada inválida, as demais permanecerão em pleno vigor.</p>
+
+            <h3>12.3 Não Renúncia</h3>
+            <p>Nossa falha em exercer qualquer direito não constitui renúncia desse direito.</p>
+
+            <h3>12.4 Cessão</h3>
+            <p>Você não pode transferir seus direitos sob estes Termos. Podemos ceder nossos direitos a terceiros.</p>
+
+            <h3>12.5 Comunicações</h3>
+            <p>Comunicações oficiais serão enviadas via:</p>
+            <ul>
+                <li>WhatsApp (para avisos gerais)</li>
+                <li>E-mail cadastrado (quando aplicável)</li>
+                <li>Publicação nesta página (para alterações de termos)</li>
+            </ul>
+
+            <h2>13. Lei Aplicável e Foro</h2>
+
+            <h3>13.1 Legislação</h3>
+            <p>Estes Termos são regidos pelas leis da República Federativa do Brasil, especialmente:</p>
+            <ul>
+                <li>Código Civil Brasileiro</li>
+                <li>Código de Defesa do Consumidor (quando aplicável)</li>
+                <li>Lei Geral de Proteção de Dados (LGPD)</li>
+                <li>Marco Civil da Internet</li>
+            </ul>
+
+            <h3>13.2 Resolução de Disputas</h3>
+            <p>Em caso de conflito:</p>
+            <ul>
+                <li><strong>1ª Etapa:</strong> Tentativa de resolução amigável através da secretaria</li>
+                <li><strong>2ª Etapa:</strong> Mediação ou arbitragem, se ambas as partes concordarem</li>
+                <li><strong>3ª Etapa:</strong> Foro competente conforme abaixo</li>
+            </ul>
+
+            <h3>13.3 Foro</h3>
+            <p>Fica eleito o foro da comarca de Teresina - PI para dirimir quaisquer controvérsias decorrentes destes Termos, com exclusão de qualquer outro, por mais privilegiado que seja.</p>
+
+            <h2>14. Contato</h2>
+
+            <p>Para questões relacionadas a estes Termos de Serviço:</p>
+            <ul>
+                <li><strong>WhatsApp:</strong> Através do assistente Meu Dízimo Digital</li>
+                <li><strong>E-mail:</strong> ewertonlv@gmail.com</li>
+                <li><strong>Endereço:</strong> Rua Santa Rita de Cássia - Renascença, Teresina - PI, CEP 64082-343</li>
+                <li><strong>Telefone:</strong> (86) 98852-1231</li>
+                <li><strong>Horário:</strong> Segunda a sexta, das 8h às 17h</li>
+            </ul>
+
+            <div class="highlight">
+                <strong>Dúvidas?</strong> Estamos à disposição para esclarecer qualquer ponto destes Termos. Seu entendimento completo é importante para nós.
+            </div>
+
+            <h2>15. Declaração Final</h2>
+
+            <p>Ao utilizar o serviço Meu Dízimo Digital, você declara que:</p>
+            <ul>
+                <li>✅ Leu e compreendeu estes Termos de Serviço na íntegra</li>
+                <li>✅ Leu e compreendeu a Política de Privacidade</li>
+                <li>✅ Concorda voluntariamente com todos os termos e condições</li>
+                <li>✅ Tem capacidade legal para firmar este acordo</li>
+                <li>✅ Fornecerá informações verdadeiras</li>
+                <li>✅ Usará o serviço de forma responsável e ética</li>
+            </ul>
+
+            <p class="date">
+                <strong>Data de última atualização:</strong> 08 de fevereiro de 2026<br>
+                <strong>Versão:</strong> 1.0
+            </p>
+        </div>
+
+        <footer>
+            <div class="footer-brand">Meu Dízimo Digital</div>
+            <p>Assistente digital da Pastoral do Dízimo — Paróquia Nossa Senhora Aparecida</p>
+            <p style="margin-top: 0.8rem;">
+                <strong>Meu Dízimo Digital</strong> é um produto de
+                <strong>EWERTON L VALE TECH</strong> (<a href="https://ewertonlvale.github.io/lealtech/">Leal Tech Solutions</a>),
+                desenvolvido para a Pastoral do Dízimo da Paróquia Nossa Senhora Aparecida.
+            </p>
+            <p style="margin-top: 0.8rem;">
+                <a href="politica_privacidade.html">Política de Privacidade</a>
+                · <a href="termo_uso.html">Termo de Uso</a>
+                · © 2026 EWERTON L VALE TECH
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
