@@ -4,7 +4,7 @@ Site público do bot **Meu Dízimo Digital**, da Paróquia Nossa Senhora da Conc
 a página de apresentação, a política de privacidade, os termos de uso e as instruções de exclusão
 de dados que a Meta exige do app do WhatsApp.
 
-Publicado pelo GitHub Pages em **https://ewertonlvale.github.io/site_meu_dizimo/**, a partir da
+Publicado pelo GitHub Pages em **https://ewertonlvale.github.io/meu_dizimo/**, a partir da
 raiz da branch `main`.
 
 ## Por que é um repositório separado
